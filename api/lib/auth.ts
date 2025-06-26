@@ -12,6 +12,7 @@ function getClient(env: Env): B2BClient {
         client = new B2BClient({
             project_id: env.STYTCH_PROJECT_ID,
             secret: env.STYTCH_PROJECT_SECRET,
+            custom_base_url: env.STYTCH_DOMAIN,
         })
     }
     return client
@@ -68,9 +69,15 @@ export const stytchBearerTokenAuthMiddleware = createMiddleware<{
     Bindings: Env,
 }>(async (c, next) => {
     const authHeader = c.req.header('Authorization')
+    const url = new URL(c.req.url);
 
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-        throw new HTTPException(401, {message: 'Missing or invalid access token'})
+        const wwwAuthValue = `Bearer error="Unauthorized", error_description="Unauthorized", resource_metadata="${url.origin}/.well-known/oauth-protected-resource"`;
+        const responseHeaders = new Headers();
+
+        responseHeaders.set('WWW-Authenticate', wwwAuthValue);
+        const res = new Response(null, {status: 401, headers: responseHeaders})
+        throw new HTTPException(401, {message: 'Missing or invalid access token', res: res})
     }
     const accessToken = authHeader.substring(7);
 
