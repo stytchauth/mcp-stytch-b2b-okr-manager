@@ -67,9 +67,10 @@ VITE_STYTCH_PUBLIC_TOKEN=public-token-test-abc123-abcde-1234-0987-0000-abcd1234
 ```
 
 
-4. Open `.dev.vars` in the text editor of your choice, and set the environment variables using the `Project ID` and `Secret`  found on [Project Settings](https://stytch.com/dashboard/project-settings?env=test).
+4. Open `.dev.vars` in the text editor of your choice, and set the environment variables using the `Project ID`, `Domain`, and `Secret`  found on [Project Settings](https://stytch.com/dashboard/project-settings?env=test).
 ```
 // This is what a completed .dev.vars file will look like
+STYTCH_DOMAIN=https://replace-me-1234.customers.stytch.dev
 STYTCH_PROJECT_ID=project-test-6c20cd16-73d5-44f7-852c-9a7e7b2ccf62
 STYTCH_PROJECT_SECRET=secret-test-.....
 ```

@@ -23,7 +23,7 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-router-dom": "^7.4.0",
-		"stytch": "^12.12.2",
+		"stytch": "^12.22.0",
 		"workers-mcp": "^0.0.13",
 		"zod": "^3.24.2"
 	},
