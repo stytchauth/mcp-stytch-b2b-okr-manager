@@ -99,8 +99,8 @@ npx @modelcontextprotocol/inspector@latest
 ```
 
 Navigate to the URL where the Inspector is running, and input the following values:
-- Transport Type: `SSE`
-- URL: `http://localhost:3000/sse`
+- Transport Type: `Streamable HTTP`
+- URL: `http://localhost:3000/mcp`
 
 Click Connect to test the authorization flow and interacting with the Objectives and Key Results via your MCP Server!
 

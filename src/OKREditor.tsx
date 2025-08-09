@@ -241,7 +241,7 @@ const OKREditor = ({stytchPermissions}: EditorProps) => {
                         running on{' '}
                         <NavLink to="https://modelcontextprotocol.io/introduction">Cloudflare Workers</NavLink>.
                         Connect to the Server running
-                        at <b>{window.location.origin}/sse</b>{' '}
+                        at <b>{window.location.origin}/mcp</b>{' '}
                         with your MCP Client to try it out.{' '}
                         <br/>
                         <br/>

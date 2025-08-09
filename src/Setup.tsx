@@ -20,6 +20,7 @@ export default function Setup({children}: { children: ReactNode }) {
                             <li><code>VITE_STYTCH_PUBLIC_TOKEN</code> in your <code>.env.local</code></li>
                             <li><code>STYTCH_PROJECT_ID</code> in your <code>.dev.vars</code></li>
                             <li><code>STYTCH_PROJECT_SECRET</code> in your <code>.dev.vars</code></li>
+                            <li><code>STYTCH_DOMAIN</code> in your <code>.dev.vars</code></li>
                         </ul>
                     </div>
                     <div className="error-section">
